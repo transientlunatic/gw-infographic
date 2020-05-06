@@ -1,0 +1,257 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg viewBox="0 0 600 600"
+     version="1.1"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <style type="text/css">
+  .sky {
+    fill: blue;
+}
+.grass {
+    fill: green;
+}
+.avatar {
+    clip-path: url(#clipCircle);
+}
+.outline {
+    stroke: 1px black solid;
+}
+.detector-station {
+    fill: white;
+}
+.detector-arm {
+    stroke: white;
+}
+.llo-detector {
+    transform: perspective(30px);
+}
+.white-cloud { fill: #FFFFFF; }
+.grey-cloud  { fill: #BCBEC0;}
+.dark-cloud  { fill: #939598;}
+.sky{opacity:0.818;fill:#53C8E9;enable-background:new    ;}
+.ground-grass{fill:#5FBB46;}
+.ground-dust{fill:#C49A6C;}
+.mountain{fill:#8B5E3C;}
+.st17{clip-rule:evenodd;fill:#31A649;}
+.st18{clip-rule:evenodd;fill:#63503B;}
+.st19{clip-rule:evenodd;fill:#0F8140;}
+.st20{clip-rule:evenodd;fill:#F57E2E;}
+.st21{clip-rule:evenodd;fill:#FBAA1F;}
+.st22{clip-rule:evenodd;fill:#794523;}
+.st23{clip-rule:evenodd;fill:#F2662E;}
+.st24{clip-rule:evenodd;fill:#B46628;}
+.st25{clip-rule:evenodd;fill:#3D8940;}
+.st26{clip-rule:evenodd;fill:#345025;}
+.st27{clip-rule:evenodd;fill:#635020;}
+.virgo{fill:#965BA5;}
+.livingston{fill:#4BA6FF;}
+.hanford{fill:#EE0000;}
+.pennant-label {text-align: center;
+		font-family: "Lato Heavy", sans-serif;
+		color: #FFFFFF;
+		stroke: #FFFFFF;
+		font-size: 70px;
+		fill: #FFFFFF;}
+		.box { fill:#F7E1E3;}
+		.event-label { font-family: "Lato Heavy", Arial, sans-serif; font-size: 55pt;}
+		.logo-text {font-size: 2pt; font-family: "Lato Heavy", Arial, sans-serif;}
+		.black-hole {fill: #000000; }
+		.neutron-star {fill: #AAAAAA; stroke: #000000; }
+  </style>
+  <defs>
+    <clipPath id="clipCircle">
+      <circle cx="35" cy="40" r="40"/>
+    </clipPath>
+  </defs>
+
+  <symbol id="pennant"
+	  viewBox="502.24 297.74 61.5 92"
+	  >
+
+      <polygon points="563.8,297.74
+		       563.8,357.37
+		       532.95,388.23
+		       502.24,357.52
+		       502.24,297.74 	"/>
+ 
+  </symbol>
+  
+  <symbol id="livingston-avatar"
+	  height="200"
+	  width="200"
+	  viewBox="20 0 30 80"
+	  >
+    <!-- viewBox="532 200 50 241.89" -->
+    <title>The LIGO Livingston detector</title>
+    <g class="avatar">
+      <g>
+	<g transform="scale(1.2) translate(-440 -262)">
+	  <g id="g11605_2_" transform="matrix(1.1998295,0,0,1.1998295,-278.94616,-338.40284)">
+	    <g id="g10765_2_" transform="matrix(0.38569462,0,0,0.38569462,563.67819,51.742292)">
+	      
+	      <rect x="82.78" y="1154.71" class="sky" width="243.16" height="251.05"/>
+	      <rect x="83.47" y="1235.57" class="ground-grass" width="242.18" height="100.26"/>
+	      
+	      <path id="path5975-6_2_" class="detector-arm" d="M146.26,1237.6l61.51,16.48"/>
+	      <path id="path5977-4_2_" class="detector-arm" d="M209.1,1254.86l-64.91,49.72"/>
+	      
+	      <circle id="path5981-8-2_2_" class="detector-station" cx="146.95" cy="1237.61" r="2.84"/>
+	      <circle id="path5981-9-5_2_" class="detector-station" cx="145.07" cy="1303.37" r="4.52"/>
+	      <circle id="path5981-6_2_" class="detector-station" cx="207.81" cy="1254.9" r="6.21"/>
+	      <!-- Grass  -->
+	      <path id="path6004_2_" class="grass" d="M82.39,1235.76h53.17c0,0,4.13,5.79,5.87,7.94c9.5,11.76,61.35,6.22,47.63,17.67
+						      c-36.22,30.22-64.55,47.24-64.55,47.24l-41.43,0.35L82.39,1235.76z"/>
+	      <path id="path6006_2_" class="grass" d="M159.04,1308.03c0,0,27.88-31.91,46.96-39.01c5.5-2.05,8.66-1.33,12.77-5.52
+						      c5.64-5.75,3.23-10.14-2.42-15.88c-5.01-5.09-7.09-2.44-14.16-3.45c-10.75-1.54-31.42-8.63-31.42-8.63H325.8l-0.35,73.2
+						      L159.04,1308.03z"/>
+	    </g>	
+	  </g>
+
+	  <!-- Clouds -->
+	  
+	  <g class="cloud white-cloud">
+	    <circle cx="455.96" cy="282.03" r="4.57"/>
+	    <path   d="M461.93,289.3h-11.94c-2.01,0-3.63-1.63-3.63-3.63l0,0c0-2.01,1.63-3.63,3.63-3.63h11.94
+      		       c2.01,0,3.63,1.63,3.63,3.63l0,0C465.56,287.67,463.94,289.3,461.93,289.3z"/>
+	  </g>
+
+	  <g class="cloud grey-cloud">
+	    <circle cx="471.48" cy="273.58" r="4.57"/>
+	    <path d="M477.45,280.85h-11.94c-2.01,0-3.63-1.63-3.63-3.63l0,0c0-2.01,1.63-3.63,3.63-3.63h11.94
+		     c2.01,0,3.63,1.63,3.63,3.63l0,0C481.08,279.22,479.45,280.85,477.45,280.85z"/>
+	  </g>
+	  
+	  <g class="cloud dark-cloud">
+	    <circle cx="486.65" cy="284.32" r="4.57"/>
+	    <path   d="M492.62,291.58h-11.94c-2.01,0-3.63-1.63-3.63-3.63v0c0-2.01,1.63-3.63,3.63-3.63h11.94
+		       c2.01,0,3.63,1.63,3.63,3.63v0C496.25,289.95,494.63,291.58,492.62,291.58z"/>
+	  </g>
+	</g>
+
+      </g>  
+    </g>  
+  </symbol>
+
+  <symbol id="hanford-avatar"
+	  height="200"
+	  width="200"
+	  viewBox="20 0 30 80"
+	  >
+    <!-- viewBox="532 200 50 241.89" -->
+    <title>The LIGO Hanford detector</title>
+    <g class="avatar">
+      <g transform="scale(1.2) translate(-380 -262)">
+
+	<g id="g11593" transform="matrix(1.1998295,0,0,1.1998295,-260.90616,-339.90284)">
+	  <g id="g10669" transform="matrix(0.42048812,0,0,0.42048812,467.95064,203.03612)" class="st33">
+	    <rect id="rect5371" x="122.04" y="700.67" class="sky" width="212.08" height="80.3"/>
+	    <rect id="rect5373" x="102.74" y="775.99" class="ground-dust" width="249.75" height="75.04"/>
+	    <path id="path5375" class="mountain"
+		  d="M153.27,776l16.88-11.72l15-0.33l5-5.21l51.26-5.9l11.56,11.4l10,3.91l17.19,7.81
+		     L153.27,776z"/>
+	    <path class="detector-arm" d="M161.13,787.01l39.83,41.49"/>
+	    <path class="detector-arm" d="M200.72,829.26l64.69-29.53"/>
+	    <circle class="detector-station" cx="202.92" cy="828" r="4.09"/>
+	    <circle id="path5381-2" class="detector-station" cx="161.77" cy="787.67" r="2.23" />
+	    <circle id="path5381-4" class="detector-station" cx="266.34" cy="799.38" r="2.97" />
+	  </g>
+	</g>
+      </g>
+    </g>
+  </symbol>
+
+  <symbol id="virgo-avatar"
+	  height="200"
+	  width="200"
+	  viewBox="0 0 70 80"
+	  >
+    <title>The Virgo detector</title>
+    <g class="avatar">
+      <g transform="scale(1.2) translate(-510 -263)">
+
+
+	
+	<polyline id="rect5971_2_" class="sky" points="573.16,255.93 452.05,255.93 452.05,296.3 573.16,296.3"/>
+	<polyline id="rect5973_2_" class="ground-grass" points="573.67,295.52 451.55,295.52 451.55,331.85 573.67,331.85"/>
+
+	<!-- Fields -->
+	
+	<path id="path9976_2_" class="field st17" d="M518.7,312.44l-9.74-9.62l-10.59,5.85l9.38,9.01L518.7,312.44z"/>
+	<path id="path9982_2_" class="field st18" d="M502.86,295.69l6.35,8.37l-13.31,3.83l-6.96-12.3L502.86,295.69z"/>
+	<path id="path9357_2_" class="field st19" d="M527.55,300.21l-10.72,3.17l9.86,7.55l10.35-5.24L527.55,300.21z"/>
+	<path id="path9928_2_" class="field st20" d="M539.58,295.45l-9.74,3.65l8.89,5.48l10.47-5.36L539.58,295.45z"/>
+	<path id="path9960_2_" class="field st21" d="M537.21,306.59l8.52,5.85l-10.72,6.45l-8.52-7.55L537.21,306.59z"/>
+	<path id="path9962_2_" class="field st22" d="M539.64,305.98l11.08-6.33l11.08,4.99l-13.76,6.7L539.64,305.98z"/>
+	<path id="path9964_2_" class="field st23" d="M529.05,321.08l-8.28-7.18l-11.81,4.87l9.86,7.55L529.05,321.08z"/>
+	<path id="path9966_2_" class="field st24" d="M549.02,314.39l9.86,6.58l-11.69,5.72l-10.23-6.7L549.02,314.39z"/>
+	<path id="path9972_2_" class="field st25" d="M571.43,314.75l-8.04-8.04l-12.54,6.82l10.59,7.06L571.43,314.75"/>
+	<path id="path9974_2_" class="field st25" d="M529.87,322.48l8.15,6.32h-16.56l-1.83-1.46L529.87,322.48z"/>
+	<path id="path9978_2_" class="field st26" d="M524.66,300.28l-6.83-5.08l-11.09,0.3l7.33,7.9L524.66,300.28z"/>
+	<path id="path9980_2_" class="field st27" d="M534.64,295.8l-12.7-0.28l4.33,4.31L534.64,295.8z"/>
+
+	<!-- Clouds -->
+	
+	<g class="cloud white-cloud">
+	  <circle class="st6" cx="518.29" cy="276.58" r="2.7"/>
+	  <path class="st6" d="M523.96,278.72c0,1.18-1.28,2.15-2.83,2.15h-5.68c-1.56,0-2.83-0.97-2.83-2.15s1.28-2.15,2.83-2.15h5.68
+			       C522.69,276.58,523.96,277.54,523.96,278.72z"/>
+	</g>
+	<g class="cloud white-cloud">
+	  <circle class="st6" cx="550.92" cy="281.71" r="2.36"/>
+	  <path class="st6" d="M555.87,283.59c0,1.03-1.28,1.87-2.83,1.87h-4.23c-1.56,0-2.83-0.84-2.83-1.87c0-1.03,1.28-1.87,2.83-1.87
+			       h4.23C554.6,281.71,555.87,282.56,555.87,283.59z"/>
+	</g>
+
+	<!-- Detector -->
+	
+	<circle id="path5981-9_2_" class="detector-station" cx="538.8" cy="324.66" r="2.26"/>
+	<circle id="path5981_2_" class="detector-station" cx="511.51" cy="303.3" r="3.1"/>
+	<circle id="path5981-8_2_" class="detector-station" cx="539.72" cy="295.12" r="1.41"/>
+	
+	<path id="path5975_2_" class="detector-arm" d="M540.06,295.12l-28.79,9.26"/>
+	<path id="path5977_2_" class="detector-arm" d="M508.72,301.73l31.46,24.1"/>
+      </g>
+    </g>
+
+  </symbol>
+
+  <symbol id="bbh-logo" viewBox="0 0 10.5 2">
+    <circle class="black-hole" cx="1" cy="1" r="1" />
+    <circle class="neutron-star" cx="3.5" cy="1" r="1" />
+    <text x="5" y="2" class="logo-text">BBH</text>
+  </symbol>
+
+  <rect x="0" y="100"
+	width="400px" height="400px"
+	id="detection-box"
+	class="box" />
+
+  <text y="500" class="event-label">GW150914</text>
+
+  <use xlink:href="#bbh-logo" x="20" y="0" width="150" />
+  
+  <g id="detector-pennants" transform="scale(0.5) translate(200 0)">
+    
+    <use xlink:href="#pennant" class="virgo" x="400" y="50" height="400px" width="200px"/>
+    <use xlink:href="#pennant" class="hanford" x="0" y="50" height="400px" width="200px"/>
+    <use xlink:href="#pennant" class="livingston" x="200" y="50" height="400px" width="200px"/>
+    
+    <use xlink:href="#livingston-avatar" x="0" y="0" height="200px" width="200px"/>
+    <use xlink:href="#hanford-avatar" x="200" y="0" height="200px" width="200px"/>
+    <use xlink:href="#virgo-avatar" x="400" y="0" height="200px" width="200px"/>
+
+    <text class="pennant-label" x="70" y="300">H</text>
+    <text class="pennant-label" x="275" y="300">L</text>
+    <text class="pennant-label" x="475" y="300">V</text>
+
+  </g>
+
+
+  
+</svg>
+
+
+
