@@ -24,7 +24,9 @@
 }
 .detector-arm {
     stroke: white;
-}
+    }
+    .tree-line { stroke: black; stroke-width: 1; fill: none;}
+    .radiation-line { stroke: #333333; stroke-width: 1; fill: none;}
 .llo-detector {
     transform: perspective(30px);
 }
@@ -35,6 +37,10 @@
 .ground-grass{fill:#5FBB46;}
 .ground-dust{fill:#C49A6C;}
 .mountain{fill:#8B5E3C;}
+.tree-text{
+fill:#FFFFFF;
+}
+.lato { font-family: "Lato", Arial, sans-serif;}
 .st17{clip-rule:evenodd;fill:#31A649;}
 .st18{clip-rule:evenodd;fill:#63503B;}
 .st19{clip-rule:evenodd;fill:#0F8140;}
@@ -49,17 +55,27 @@
 .virgo{fill:#965BA5;}
 .livingston{fill:#4BA6FF;}
 .hanford{fill:#EE0000;}
+.geo600 {fill: #222222;}
+.india{fill: #b0dd8b;}
+.kagra{fill: #ffb200;}
 .pennant-label {text-align: center;
 		font-family: "Lato Heavy", sans-serif;
 		color: #FFFFFF;
 		stroke: #FFFFFF;
 		font-size: 70px;
 		fill: #FFFFFF;}
-		.box { fill:#F7E1E3;}
 		.event-label { font-family: "Lato Heavy", Arial, sans-serif; font-size: 55pt;}
 		.logo-text {font-size: 2pt; font-family: "Lato Heavy", Arial, sans-serif;}
 		.black-hole {fill: #000000; }
-		.neutron-star {fill: #AAAAAA; stroke: #000000; }
+		.neutron-star {fill: #AAAAAA; stroke: #000000; stroke-width: 0.25px; stroke-dasharray: 0.15;}
+		.tree-label {fill: #FFFFFF; stroke: #000000; 		stroke-width: 0.25pt;
+		font-family: Lato, Arial, sans-serif; font-size: 10pt; text-align: center;}
+		.tree-label-invert {stroke: #FFFFFF; fill: #000000;
+		stroke-width: 0.25pt;
+		font-family: Lato, Arial, sans-serif; font-size: 10pt; text-align: center;}
+		.o2 {fill: #ad1457;}
+		.o3a {fill: #ffd740;}
+		.o1 {fill: #40c4ff;}
   </style>
   <defs>
     <clipPath id="clipCircle">
@@ -68,16 +84,17 @@
   </defs>
 
   <symbol id="pennant"
-	  viewBox="502.24 297.74 61.5 92"
+	  viewBox="0 0 100 150"
 	  >
-
-      <polygon points="563.8,297.74
-		       563.8,357.37
-		       532.95,388.23
-		       502.24,357.52
-		       502.24,297.74 	"/>
- 
+    <path d="M 0 0 L 100 0 L 100 100 L 50 150 L 0 100 L 0 0" />
   </symbol>
+
+  <symbol id="pennant-short" viewBox="0 0 100 50">
+    <path d="M0 0 L 100 0 L 50 50 Z" />
+  </symbol>
+    <symbol id="pennant-short-invert" viewBox="0 0 100 50">
+    <path d="M0 50 L 100 50 L 50 0 Z" />
+    </symbol>
   
   <symbol id="livingston-avatar"
 	  height="200"
@@ -218,38 +235,100 @@
 
   </symbol>
 
-  <symbol id="bbh-logo" viewBox="0 0 10.5 2">
+  <symbol id="bbh-logo" viewBox="0 0 12.5 2">
+    <circle class="black-hole" cx="1" cy="1" r="1" />
+    <circle class="black-hole" cx="3.5" cy="1" r="1" />
+    <text x="5" y="2" class="logo-text">BBH</text>
+  </symbol>
+  <symbol id="nsbh-logo" viewBox="0 0 12.5 2">
     <circle class="black-hole" cx="1" cy="1" r="1" />
     <circle class="neutron-star" cx="3.5" cy="1" r="1" />
+    <text x="5" y="2" class="logo-text">NSBH</text>
+  </symbol>
+  <symbol id="bns-logo" viewBox="0 0 12.5 2">
+    <circle class="neutron-star" cx="1" cy="1" r="1" />
+    <circle class="neutron-star" cx="3.5" cy="1" r="1" />
     <text x="5" y="2" class="logo-text">BBH</text>
+  </symbol>
+
+
+  <symbol id="tree" viewBox="0 0 100 100">
+    <g>
+
+      <g id="tree-outline">
+	<path class="tree-line" d="M25 10 L50 50" />
+	<path class="tree-line" d="M75 10 L50 50" />
+	<path class="tree-line" d="M50 50 L50 90" />
+      </g>
+      
+      <g id="primary">
+	<circle id="primary-object" class="black-hole" cx="25" cy="10" r="10" />
+	<text class="tree-label" x="25" y="10" text-anchor="middle" dominant-baseline="middle">10</text> 
+      </g>
+      <g id="secondary">
+	<circle id="secondary-object" class="black-hole" cx="75" cy="10" r="5" />
+	<text class="tree-label" x="75" y="10" text-anchor="middle" dominant-baseline="middle">5</text> 
+      </g>
+
+      <g id="remnant">
+	<circle id="remnant-object" class="black-hole" cx="50" cy="90" r="15" />
+	<text class="tree-label" x="50" y="90" text-anchor="middle" dominant-baseline="middle">13</text> 
+      </g>
+
+
+      <g id="radiation">
+	<circle class="radiation-line" cx="50" cy="50" r="5" />
+	<circle class="radiation-line" cx="50" cy="50" r="8" />
+	<circle class="radiation-line" cx="50" cy="50" r="11" />
+
+	<text class="tree-label-invert" x="25" y="50" text-anchor="middle" dominant-baseline="middle">2</text> 
+      </g>
+    </g>
   </symbol>
 
   <rect x="0" y="100"
 	width="400px" height="400px"
 	id="detection-box"
-	class="box" />
+	class="box o3a" />
 
-  <text y="500" class="event-label">GW150914</text>
+  <text y="500" id="event-label" class="event-label">GW150914</text>
 
-  <use xlink:href="#bbh-logo" x="20" y="0" width="150" />
-  
-  <g id="detector-pennants" transform="scale(0.5) translate(200 0)">
-    
-    <use xlink:href="#pennant" class="virgo" x="400" y="50" height="400px" width="200px"/>
-    <use xlink:href="#pennant" class="hanford" x="0" y="50" height="400px" width="200px"/>
-    <use xlink:href="#pennant" class="livingston" x="200" y="50" height="400px" width="200px"/>
-    
-    <use xlink:href="#livingston-avatar" x="0" y="0" height="200px" width="200px"/>
-    <use xlink:href="#hanford-avatar" x="200" y="0" height="200px" width="200px"/>
-    <use xlink:href="#virgo-avatar" x="400" y="0" height="200px" width="200px"/>
+  <use xlink:href="#bbh-logo" x="20" y="-40" width="150" />
+  <use xlink:href="#bns-logo" x="20" y="0" width="150" />
+  <use xlink:href="#nsbh-logo" x="20" y="40" width="150" />
 
-    <text class="pennant-label" x="70" y="300">H</text>
-    <text class="pennant-label" x="275" y="300">L</text>
-    <text class="pennant-label" x="475" y="300">V</text>
-
+<symbol id="detector-rosette" viewBox="-100 0 600 100">
+  <g transform="scale(0.5)">
+    <use xlink:href="#pennant-short" class="virgo" x="400" y="50" height="400px" width="200px"/>
+    <use xlink:href="#pennant-short" class="hanford" x="0" y="50" height="400px" width="200px"/>
+    <use xlink:href="#pennant-short" class="livingston" x="200" y="50" height="400px" width="200px"/>
+    <g>
+      <use xlink:href="#pennant-short-invert" class="india" x="-100" y="50" height="400px" width="200px"/>
+      <use xlink:href="#pennant-short-invert" class="geo600" x="100" y="50" height="400px" width="200px"/>
+      <use xlink:href="#pennant-short-invert" class="kagra" x="300" y="50" height="400px" width="200px"/>
+    </g>
   </g>
+</symbol>
 
+<use xlink:href="#detector-rosette" y="-250" />
+  
+  <!-- <g id="detector-pennants" transform="scale(0.5) translate(200 0)"> -->
 
+  <!--   <use xlink:href="#pennant" class="virgo" x="400" y="50" height="400px" width="200px"/> -->
+  <!--   <use xlink:href="#pennant" class="hanford" x="0" y="50" height="400px" width="200px"/> -->
+  <!--   <use xlink:href="#pennant" class="livingston" x="200" y="50" height="400px" width="200px"/> -->
+    
+  <!--   <use xlink:href="#livingston-avatar" x="0" y="0" height="200px" width="200px"/> -->
+  <!--   <use xlink:href="#hanford-avatar" x="200" y="0" height="200px" width="200px"/> -->
+  <!--   <use xlink:href="#virgo-avatar" x="400" y="0" height="200px" width="200px"/> -->
+
+  <!--   <text class="pennant-label" x="70" y="300">H</text> -->
+  <!--   <text class="pennant-label" x="275" y="300">L</text> -->
+  <!--   <text class="pennant-label" x="475" y="300">V</text> -->
+
+  <!-- </g> -->
+
+  <use xlink:href="#tree" x="200" y="0" width="200px" />
   
 </svg>
 
