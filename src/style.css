@@ -6,3 +6,78 @@
     width: 100px;
     height: 100px;
 }
+
+.sky {
+    fill: blue;
+}
+.grass {
+    fill: green;
+}
+.avatar {
+    clip-path: url(#clipCircle);
+}
+.outline {
+    stroke: 1px black solid;
+}
+.detector-station {
+    fill: white;
+}
+.detector-arm {
+    stroke: white;
+}
+.tree-line { stroke: black; stroke-width: 1; fill: none;}
+.radiation-line { stroke: #333333; stroke-width: 1; fill: none;}
+.llo-detector {
+    transform: perspective(30px);
+}
+.white-cloud { fill: #FFFFFF; }
+.grey-cloud  { fill: #BCBEC0;}
+.dark-cloud  { fill: #939598;}
+.sky{opacity:0.818;fill:#53C8E9;enable-background:new    ;}
+.ground-grass{fill:#5FBB46;}
+.ground-dust{fill:#C49A6C;}
+.mountain{fill:#8B5E3C;}
+.tree-text{
+    fill:#FFFFFF;
+}
+.lato { font-family: "Lato", Arial, sans-serif;}
+.st17{clip-rule:evenodd;fill:#31A649;}
+.st18{clip-rule:evenodd;fill:#63503B;}
+.st19{clip-rule:evenodd;fill:#0F8140;}
+.st20{clip-rule:evenodd;fill:#F57E2E;}
+.st21{clip-rule:evenodd;fill:#FBAA1F;}
+.st22{clip-rule:evenodd;fill:#794523;}
+.st23{clip-rule:evenodd;fill:#F2662E;}
+.st24{clip-rule:evenodd;fill:#B46628;}
+.st25{clip-rule:evenodd;fill:#3D8940;}
+.st26{clip-rule:evenodd;fill:#345025;}
+.st27{clip-rule:evenodd;fill:#635020;}
+.virgo{fill:#965BA5;}
+.livingston{fill:#4BA6FF;}
+.hanford{fill:#EE0000;}
+.geo600 {fill: #222222;}
+.india{fill: #b0dd8b;}
+.kagra{fill: #ffb200;}
+.pennant-label {text-align: center;
+		font-family: "Lato Heavy", sans-serif;
+		color: #FFFFFF;
+		stroke: #FFFFFF;
+		font-size: 70px;
+		fill: #FFFFFF;}
+.event-label { font-family: "Lato Heavy", Arial, sans-serif; font-size: 45pt;}
+.logo-text {font-size: 2pt; font-family: "Lato Heavy", Arial, sans-serif;}
+.black-hole {fill: #000000; }
+.neutron-star {fill: #AAAAAA; stroke: #000000; stroke-width: 0.25px; stroke-dasharray: 0.15;}
+.tree-label {fill: #FFFFFF; stroke: #000000; 		stroke-width: 0.25pt;
+	     font-family: Lato, Arial, sans-serif; font-size: 10pt; text-align: center;}
+.tree-label-invert {stroke: #FFFFFF; fill: #000000;
+		    stroke-width: 0.25pt;
+		    font-family: Lato, Arial, sans-serif; font-size: 10pt; text-align: center;}
+.O2 {fill: #ad1457;}
+.O3a {fill: #ffd740;}
+.O1 {fill: #40c4ff;}
+
+
+#infographic-pane>svg {
+    padding: 5px;
+}
