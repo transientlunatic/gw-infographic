@@ -1,3 +1,7 @@
+var globalizePlugin = require( "globalize-webpack-plugin" );
+var production = process.env.NODE_ENV === "production";
+
+
 module.exports = {
     entry: './src/index.js',
     module: {
@@ -23,7 +27,14 @@ module.exports = {
     resolve: {
 	extensions: ['*', '.js']
     },
-    
+    plugins: [
+	new globalizePlugin({
+	    production: production,
+	    developmentLocale: "en",
+	    supportedLocales: ["en"],
+	    messages: "messages/[locale].json",
+	    output: "i18n/[locale].[chunkhash].js"})
+    ],
     output: {
 	path: __dirname + '/dist',
 	publicPath: '/',

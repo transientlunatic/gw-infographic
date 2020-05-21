@@ -1,20 +1,21 @@
+var Globalize = require("globalize");
+
 function EventType(eventtype, pane, cx=0, cy=0, scale=15){
 
     let types = {"BBH": {"primary": "black-hole",
 			 "secondary": "black-hole",
-			 "name": "Binary Black Hole",
-			 "abbreviation": "BBH"},
+			 "name": Globalize.formatMessage("bbh-full"),
+			 "abbreviation": Globalize.formatMessage("bbh-abbrev")},
 		 "BNS": {"primary": "neutron-star",
 			 "secondary": "neutron-star",
-			 "name": "Binary Neutron Star",
-			 "abbreviation": "BNS"},
+			 "name": Globalize.formatMessage("bns-full"),
+			 "abbreviation": Globalize.formatMessage("bns-abbrev")},
 		 "NSBH": {"primary": "black-hole",
 			 "secondary": "neutron-star",
-			 "name": "Neutron Star / Black Hole",
-			 "abbreviation": "NSBH"},
+			 "name":  Globalize.formatMessage("nsbh-full"),
+			 "abbreviation":  Globalize.formatMessage("nsbh-abbrev")},
 		}
     this.type = types[eventtype];
-
 
     
     

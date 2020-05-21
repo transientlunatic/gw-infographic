@@ -1,0 +1,9 @@
+{
+    "en": { "bbh-abbrev": "BBH",
+	    "bbh-full": "Binary Black Hole",
+	    "bns-abbrev": "BNS",
+	    "bns-full": "Binary Neutron Star",
+	    "nsbh-abbrev": "NSBH",
+	    "nsbh-full": "Neutron star / black hole"
+	  }
+}

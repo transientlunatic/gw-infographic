@@ -5,10 +5,14 @@ import {DetectionTree} from './tree.js';
 import {DetectorPennant} from './pennants.js';
 import {EventType} from './symbols.js';
 
+var Globalize = require("globalize");
+
 import './style.css';
 // import RadicalsImage from './radicals.svg';
 
 import Events from './events.json';
+
+
 
 function EventPanel(event){
     this.pane = d3.select("#infographic-pane")
@@ -21,6 +25,7 @@ function EventPanel(event){
 	.attr("height", "400px")
 	.classed(`box ${event.run}`, true);
     //
+   
     let detection_tree = new DetectionTree(event.masses.primary,
 					   event.masses.secondary,
 					   event.masses.remnant,
