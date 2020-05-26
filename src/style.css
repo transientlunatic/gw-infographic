@@ -74,7 +74,7 @@
 		    stroke-width: 0.25pt;
 		    font-family: Lato, Arial, sans-serif; font-size: 10pt; text-align: center;}
 .O2 {fill: #ad1457;}
-.O3a {fill: #ffd740;}
+.O3, .O3a {fill: #ffd740;}
 .O1 {fill: #40c4ff;}
 
 
