@@ -1,5 +1,7 @@
 
-import * as d3 from 'd3'
+import * as d3 from 'd3';
+
+import * as Isotope from 'isotope-layout';
 
 import {DetectionTree} from './tree.js';
 import {DetectorPennant} from './pennants.js';
@@ -8,20 +10,45 @@ import {EventType} from './symbols.js';
 var Globalize = require("globalize");
 
 import './style.css';
-// import RadicalsImage from './radicals.svg';
 
-// import Events from './events.json';
 
+var iso;
 const request = new XMLHttpRequest();
 request.open("GET", "http://data.cardiffgravity.org/gwcat-data/data/gwosc_gracedb.json");
 request.responseType = "json";
 request.send();
 
+function FilterFunction(filterdata){
+    console.log(filterdata);
+    iso.arrange({filter: function(itemElem){
+		var data = itemElem.dataset;
+		console.log(data);
+		return data.obsrun == filterdata.run;
+    }});
+}
 
-
+function FilterButtons(){
+    this.pane = d3.select("#infographic-pane");
+    let filters = [{run:"O1",
+		    description: "The first observing run of the advanced detectors." },
+		   {"run":"O2"},
+		   {"run":"O3"}];
+    var buttonbox = this.pane.append("div").attr("class", "filters button-group filter-button-group");
+    var filterbox = buttonbox.selectAll("div").data(filters)
+	.enter()
+	.append("div")
+	.attr("data-filter", function(d){return d.run;})
+	.on("click", function(d,i){
+	    FilterFunction(d);
+	});
+    filterbox.append("h3").text(function(d){return d.run;});
+    filterbox.append("p").text(function(d){return d.description;});
+}
 
 function EventPanel(event){
-    this.pane = d3.select("#infographic-pane")
+    this.pane = d3.select("#event-grid")
+	.append("div").classed(`event-item`, true)
+	.attr("data-obsrun", event.obsrun.best)
 	.append("svg")
 	.attr("width", "200px")
 	.attr("viewBox", "0 0 400 400");
@@ -32,11 +59,11 @@ function EventPanel(event){
 	.classed(`box ${event.obsrun.best}`, true);
     //
     if ( event.M1 ){
-    let detection_tree = new DetectionTree(event.M1.best,
-					   event.M2.best,
-					   (event.Mfinal.best ? event.Mfinal.best : event.Mfinal.upper),
-					   (event.Erad ? event.Erad.best : undefined),
-					   this.pane, 200, 90, 2);
+	let detection_tree = new DetectionTree(event.M1.best,
+					       event.M2.best,
+					       (event.Mfinal.best ? event.Mfinal.best : event.Mfinal.upper),
+					       (event.Erad ? event.Erad.best : undefined),
+					       this.pane, 200, 90, 2);
     }
     let pennants = new DetectorPennant(event.net.best, this.pane);
     if ((event.objType.best != "Terrestrial") && (event.objType.best != "")) {
@@ -48,14 +75,20 @@ function EventPanel(event){
 	.text(event.name)
 }
 
-request.onload = function(){
-    const Events = request.response;
-    
 
-    // Events.forEach(function(item, index){
+request.onload = function(){
+    d3.select("#infographic-pane").append("div").attr("id", "event-grid");
+    
+    const Events = request.response;
     for( var item in Events.data){
-	console.log(item);
 	new EventPanel(Events.data[item]);
     };
 
-}	      
+    iso = new Isotope( '#event-grid', {
+	itemSelector: 'div.event-item',
+    });
+
+    var buttons = new FilterButtons();
+
+}
+
