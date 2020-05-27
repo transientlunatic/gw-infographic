@@ -4,6 +4,7 @@
 	    "bns-abbrev": "BNS",
 	    "bns-full": "Binary Neutron Star",
 	    "nsbh-abbrev": "NSBH",
-	    "nsbh-full": "Neutron star / black hole"
+	    "nsbh-full": "Neutron star / black hole",
+	    "filters-title": "Filters"
 	  }
 }
