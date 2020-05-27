@@ -16,7 +16,7 @@ import './style.css';
 
 var iso;
 const request = new XMLHttpRequest();
-request.open("GET", "http://data.cardiffgravity.org/gwcat-data/data/gwosc_gracedb.json");
+request.open("GET", "//data.cardiffgravity.org/gwcat-data/data/gwosc_gracedb.json");
 request.responseType = "json";
 request.send();
 
