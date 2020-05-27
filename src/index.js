@@ -3,6 +3,8 @@ import * as d3 from 'd3';
 
 import * as Isotope from 'isotope-layout';
 
+import {saveSvgAsPng} from 'save-svg-as-png';
+
 import {DetectionTree} from './tree.js';
 import {DetectorPennant} from './pennants.js';
 import {EventType} from './symbols.js';
@@ -18,6 +20,8 @@ request.open("GET", "http://data.cardiffgravity.org/gwcat-data/data/gwosc_graced
 request.responseType = "json";
 request.send();
 
+
+
 function FilterFunction(filterdata){
     console.log(filterdata);
     iso.arrange({filter: function(itemElem){
@@ -29,6 +33,7 @@ function FilterFunction(filterdata){
 
 function FilterButtons(){
     this.pane = d3.select("#infographic-pane");
+    this.pane.append("h2").text(Globalize.formatMessage("filters-title"));
     let filters = [{run:"O1",
 		    description: "The first observing run of the advanced detectors." },
 		   {"run":"O2"},
@@ -72,13 +77,13 @@ function EventPanel(event){
     this.pane.append("text")
 	.attr("y", "395")
 	.classed("event-label", true)
-	.text(event.name)
+	.text(event.name);
 }
 
 
 request.onload = function(){
     d3.select("#infographic-pane").append("div").attr("id", "event-grid");
-    
+    d3.select("#infographic-pane").append("div").attr("id", "tooltip"); 
     const Events = request.response;
     for( var item in Events.data){
 	new EventPanel(Events.data[item]);
@@ -90,5 +95,12 @@ request.onload = function(){
 
     var buttons = new FilterButtons();
 
+    d3.select("#infographic-pane").append("a").attr("id", "download").text("Download");
+    d3.select("#download")
+	.on('click', function(){
+    // Get the d3js SVG element and save using saveSvgAsPng.js
+    saveSvgAsPng(document.getElementsByTagName("svg")[0], "plot.png", {scale: 2, backgroundColor: "#FFFFFF"});
+})
+    
 }
 
